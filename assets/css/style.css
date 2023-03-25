@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: var(--primary);
+  background-color: var(--light);
+  margin: auto;
+}
+
+
+
+
+
+/* ------------------ MAIN HEADER  ------------------ */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--tertiary);
+}
+/* First Header Element - H1 */
+header h1 {
+  background-color: var(--secondary);
+  color: var(--tertiary);
+  min-width: 23%;
+  text-align: end;
+  padding: 10px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+/* Second Header Element - NAV BAR */
+nav {
+  margin-right: 7%;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav ul li {
+  margin: 0 10px;
+  padding: 0 7px 2px 7px;
+  border-bottom: 2px solid var(--secondary);
+}
+/* header a element */
+.header-link {
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+/* Header Image */
+.header-image {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-image: url(../images/02-hero-bg.jpg);
+  background-size: cover;
+  min-height: 150px;
+  position: relative;
+}
+.header-image h2 {
+  position: absolute;
+  background-color: var(--secondary);
+  color: var(--tertiary);
+  margin-right: 7%;
+  padding: 7px;
+}
+
+
+
+
+/* ------------------ ARTICLE SECTION  ------------------ */
+
+/* Section elements - About Me and Projects */
+.row {
+  display: flex;
+  max-width: 80%;
+  margin: auto;
+  padding: 30px 0 20px 0;
+}
+/* h2 element for articles */
+.article-label {
+  font-size: 2.2em;
+  text-align: end;
+  border-right: 3px solid var(--primary);
+  margin: 0;
+  margin-right: 35px;
+  padding-right: 10px;
+  min-width: 12%;
+}
+
+/* article element - About Me */
+.about-me p {
+  margin-top: 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* article element - Projects */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+}
+
+.projects div {
+  border: var(--border-dark);
+  margin: 10px;
+  min-width: 45%;
+}
+
+
+
+/* ------------------ FOOTER  ------------------ */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 80%;
+  border: var(--border-dark);
+}
+
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav ul li {
+  margin: 0 10px;
+  padding: 0 7px 2px 7px;
+  border-bottom: 2px solid var(--secondary);
+}
+
+
+
+/* ------------------ LAYERS  ------------------ */
+.layer {
+  display: inline-block;
+  background-color: var(--color-background-layer);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* removes the layer when hovered over */
+.layer:hover {
+  transition: .5s ease;
+  opacity: 0;
+}
