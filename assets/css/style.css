@@ -1,44 +1,47 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+
+/* SET BODY FONT, BG COLOR, AND FONT COLOR */
 body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: var(--primary);
   background-color: var(--light);
-  margin: auto;
 }
 
 
-
-
-
-/* ------------------ MAIN HEADER  ------------------ */
+/* ---------------- HEADER ------------------ */
 header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   background-color: var(--tertiary);
 }
-/* First Header Element - H1 */
+/* HEADER - H1 */
 header h1 {
   background-color: var(--secondary);
   color: var(--tertiary);
   min-width: 23%;
-  text-align: end;
   padding: 10px;
-  margin: 0;
   margin-bottom: 10px;
 }
-/* Second Header Element - NAV BAR */
-nav {
-  margin-right: 7%;
-}
+/* HEADER/FOOTER - NAV BAR */
 nav ul {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   list-style: none;
+  margin-bottom: 10px;
 }
-/* header nav list - creates a hidden background accessible with hover */
+/* HEADER - A */
+.header-link {
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+/* HEADER - NAV BAR ANIMATION - creates a hidden background accessible with hover, changes font upon hover */
 nav ul li {
   margin: 0 10px;
   padding: 0 7px 2px 7px;
@@ -49,22 +52,16 @@ nav ul li {
   background-position: bottom;
   transition: all 0.25s ease-in;
 }
-/* header li hover - background color change */
 nav ul li:hover {
   background-size: 100% 100%;
 }
-/* header a element */
-.header-link {
-  color: var(--secondary);
-  text-decoration: none;
-}
-/* header a hover - color change */
 .header-link:hover {
   color: var(--primary);
 }
 
-/* Header Image */
-.header-image {
+
+/* ---------------- HERO IMAGE ------------------ */
+#banner {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -73,7 +70,7 @@ nav ul li:hover {
   min-height: 150px;
   position: relative;
 }
-.header-image .layer {
+#banner .shading {
   display: block;
   background-color: var(--color-background-layer);
   position: absolute;
@@ -82,7 +79,7 @@ nav ul li:hover {
   width: 100%;
   height: 100%;
 }
-.header-image h2 {
+#banner h2 {
   position: absolute;
   background-color: var(--secondary);
   color: var(--tertiary);
@@ -91,57 +88,32 @@ nav ul li:hover {
 }
 
 
-
-
-/* ------------------ MAIN SECTION  ------------------ */
-
-/* Section elements - About Me and Projects*/
-.row {
-  display: grid;
-  grid-template-columns: 20% 1fr;
-  max-width: 85%;
+/* ---------------- MAIN ------------------ */
+main {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
   margin: auto;
-  margin-top: 30px;
 }
 
-/* h2 element for articles */
-.label {
-  font-size: 2.2em;
-  text-align: end;
-  border-right: 3px solid var(--primary);
-  margin: 0;
-  padding-right: 10px;
+/* MAIN - SECTIONS - Styles each section */
+.page-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20px;
+  min-height: 100px;
 }
 
-/* article element - About Me */
-.about-me {
-  margin-left: 20px;
+/* SECTIONS - LABEL - style each label H2 for the sections */
+.section-label {
+  font-size: 2.8em;
+  text-align: center;
+  min-height: 100%;
+  margin-bottom: 10px;
 }
-.about-me p {
-  margin-top: 0;
-  font-size: 13px;
-  line-height: 1.5;
-}
-
-
-/* article element - Projects */
-.projects {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin-left: 20px;
-}
-/* sets size of first project article to larger size and take full width of screen */
-.projects .project-1 {
-  grid-column: 1 / -1;
-  min-height: 300px;
-}
-/* div elements - Project Cards */
-.projects div {
-  min-height: 150px;
-  border: 3px solid var(--secondary);
-}
-.projects span {
+/* LABEL - ELEMENTS - Styles the label for each project */
+.content span {
   position: absolute;
   z-index: 1;
   background-color: var(--secondary);
@@ -149,52 +121,68 @@ nav ul li:hover {
   margin-top: 5%;
   padding: 7px;
 }
-.projects h2,
-.projects p {
+#projects h2,
+#projects p {
   margin: 0;
   padding-left: 10px;
 }
-.projects p {
+#projects p {
   font-size: 0.85rem;
   margin-top: 6px;
 }
-.project-1 {
+
+/* SECTIONS - CONTENT - Style each content DIV for the sections */
+.section-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+}
+/* CONTENT - ELEMENTS - Style the elements for the content section */
+#about-me p {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.content {
+  position: relative;
+  border: 3px solid var(--secondary);
+  width: 100%;
+  min-height: 150px;
+  margin: 5px 0;
+}
+/* CONTENT - BACKGROUND - Style the projects background Image */
+#project-1 {
   background-image: url(../images/02-portfolio-4.jpg);
   background-size: cover;
 }
-.project-2 {
+#project-2 {
   background-image: url(../images/02-portfolio-1.jpg);
   background-size: cover;
 }
-.project-3 {
+#project-3 {
   background-image: url(../images/02-portfolio-2.jpg);
   background-size: cover;
 }
-.project-4 {
+#project-4 {
   background-image: url(../images/02-portfolio-3.jpg);
   background-size: cover;
 }
-.project-5 {
+#project-5 {
   background-image: url(../images/02-run-buddy.jpg);
   background-size: cover;
 }
 
-
-
-/* ------------------ FOOTER  ------------------ */
-footer {
-  margin-bottom: 20px;
-}
-.footer-nav {
+/* ---------------- FOOTER ------------------ */
+.footer-ul {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
-  margin-left: 20px;
 }
-.footer-nav ul {
-  list-style: none;
-}
-.footer-nav ul li {
+.footer-ul li {
   margin: 10px 20px 0 20px;
   padding: 0 7px 2px 7px;
   border-bottom: 3px solid var(--primary);
@@ -204,21 +192,21 @@ footer {
   background-position: bottom;
   transition: all 0.25s ease-in;
 }
-/* header li hover - background color change */
-.footer-nav ul li:hover {
-  color: var(--light);
+/* FOOTER - NAV BAR ANIMATION - background color change when hover */
+.footer-ul li:hover {
   background-size: 100% 100%;
 }
-
-.footer-nav a {
+.footer-link {
   font-size: 1.1em;
   color: var(--primary);
   text-decoration: none;
 }
-.footer-nav a:hover {
+.footer-link:hover {
   color: var(--light);
 }
-
+.margin-bottom {
+  margin-bottom: 20px;
+}
 
 
 
@@ -226,17 +214,76 @@ footer {
 .layer {
   display: block;
   background-color: var(--color-background-layer);
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
 /* removes the layer when hovered over */
-.projects .layer:hover {
+.layer:hover {
   transition: .5s ease;
   opacity: 0;
 }
 
 
-/* ------------------ NAV TRANSITION  ------------------ */
+
+/* ---------------- MEDIA QUERIES ------------------ */
+@media screen and (min-width: 900px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+  }
+  header h1 {
+    text-align: end;
+  }
+  nav {
+    margin-right: 7%;
+  }
+  nav ul {
+    flex-direction: row;
+    margin: 0;
+  }
+  main {
+    width: 80%;
+  }
+  .page-section {
+    flex-direction: row;
+  }
+  .section-label {
+    text-align: end;
+    font-size: 3.5vw;
+    width: 20%;
+    border-right: 3px solid var(--primary);
+    padding-right: 10px;
+    margin-bottom: 0;
+  }
+  .section-content {
+    width: 77%;
+  }
+  .section-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .content {
+    justify-content: space-between;
+    width: 49%;
+    margin-top: 6px;
+    margin-bottom: 6px; 
+  }
+  #project-1 {
+    flex: 0 0 100%;
+    min-height: 300px;
+  }
+  #footer-nav {
+    justify-content: space-evenly;
+    margin-left: 20px;
+  }
+  #footer-nav ul li {
+    margin: 10px 30px 0 30px;
+  }
+}
+
