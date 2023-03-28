@@ -18,6 +18,7 @@ header {
   display: flex;
   flex-direction: column;
   background-color: var(--tertiary);
+  position: relative;
 }
 /* HEADER - H1 */
 header h1 {
@@ -140,11 +141,21 @@ main {
   align-items: center;
 }
 /* CONTENT - ELEMENTS - Style the elements for the content section */
+#about-me {
+  display: inline-block;
+}
 #about-me p {
+  margin: 0 0 10px 10px;
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 14px;
   line-height: 1.5;
+}
+#about-me #profile-image {
+  float: right;
+  border-radius: 8px;
+  height: 180px;
+  width: 150px;
 }
 .content {
   position: relative;
@@ -153,17 +164,21 @@ main {
   min-height: 150px;
   margin: 5px 0;
 }
+span #project-link {
+  text-decoration: none;
+  color: var(--tertiary);
+}
 /* CONTENT - BACKGROUND - Style the projects background Image */
 #project-1 {
-  background-image: url(../images/02-portfolio-4.jpg);
+  background-image: url(../images/horiseon.jpg);
   background-size: cover;
 }
 #project-2 {
-  background-image: url(../images/02-portfolio-1.jpg);
+  background-image: url(../images/sea-to-table.jpg);
   background-size: cover;
 }
 #project-3 {
-  background-image: url(../images/02-portfolio-2.jpg);
+  background-image: url(../images/lumber-axe.jpg);
   background-size: cover;
 }
 #project-4 {

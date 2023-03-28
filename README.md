@@ -4,52 +4,41 @@ UCF Module 2 Challenge - Profile Web Page
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+This projects goal was to build a responsive profile page. It was an even numbered module, so no starter code was provided.
 
 ## Getting Started
 
-### Dependencies
-
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
-
-### Installing
-
-* How/where to download your program
-* Any modifications needed to be made to files/folders
-
-### Executing program
-
-* How to run the program
-* Step-by-step bullets
+### User Story
 ```
-code blocks for commands
+AS AN employer
+I WANT to view a potential employee's deployed portfolio of work samples
+SO THAT I can review samples of their work and assess whether they're a good candidate for an open position
 ```
 
-## Help
-
-Any advise for common problems or issues.
+### Acceptance Criteria
 ```
-command to run if program contains helper info
+GIVEN I need to sample a potential employee's previous work
+WHEN I load their portfolio
+THEN I am presented with the developer's name, a recent photo or avatar, and links to sections about them, their work, and how to contact them
+WHEN I click one of the links in the navigation
+THEN the UI scrolls to the corresponding section
+WHEN I click on the link to the section about their work
+THEN the UI scrolls to a section with titled images of the developer's applications
+WHEN I am presented with the developer's first application
+THEN that application's image should be larger in size than the others
+WHEN I click on the images of the applications
+THEN I am taken to that deployed application
+WHEN I resize the page or view the site on various screens and devices
+THEN I am presented with a responsive layout that adapts to my viewport
 ```
 
 ## Authors
 
-ex. Devin Reilly 
-
-
-
-## Version History
-
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
+Devin Reilly 
 
 ## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+NA
 
 ## Acknowledgments
 
