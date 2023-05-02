@@ -4,6 +4,12 @@ UCF Module 2 Challenge - Profile Web Page
 
 ## Description
 
+<br />
+
+*Click on this [**LINK**](https://werthird.github.io/Profile-Webpage-Module-2/) to view our live site!*
+
+<br />
+
 This projects goal was to build a responsive profile page. It was an even numbered module, so no starter code was provided.
 
 ## Getting Started
@@ -31,6 +37,11 @@ THEN I am taken to that deployed application
 WHEN I resize the page or view the site on various screens and devices
 THEN I am presented with a responsive layout that adapts to my viewport
 ```
+<br />
+
+<img style="text-align: center; border: solid 2px white; width:100%;height:100%" src="./assets/images/profile-page-screenshot.jpg" alt="Profile page screenshot"/>
+
+<br />
 
 ## Authors
 
