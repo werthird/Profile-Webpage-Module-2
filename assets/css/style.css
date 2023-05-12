@@ -170,7 +170,7 @@ span #project-link {
 }
 /* CONTENT - BACKGROUND - Style the projects background Image */
 #project-1 {
-  background-image: url(../images/yeti-games-new-style-screenshot.jpg);
+  background-image: url(../images/aardvarchive-screenshot.jpg);
   background-size: cover;
 }
 #project-2 {
@@ -182,7 +182,7 @@ span #project-link {
   background-size: cover;
 }
 #project-4 {
-  background-image: url(../images/02-portfolio-3.jpg);
+  background-image: url(../images/yeti-games-new-style-screenshot.jpg);
   background-size: cover;
 }
 #project-5 {
